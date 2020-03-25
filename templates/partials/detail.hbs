@@ -1,0 +1,255 @@
+<section>
+        <main class="text-success" id="main">
+            <div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h4 class="detail-property-name"><strong>{{ data.listing.prop_title }}</strong><br></h4>
+                        <p>{{ data.listing.prop_address }}<br></p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="demo">
+                        <ul id="lightSlider">
+                            <li data-thumb="{{ data.listing.mainphoto }}">
+                                <img src="http://uat.homesdirect.ng/{{ data.listing.mainphoto }}" onerror="if (this.src != '../img/d_img.jpg') this.src = '../img/d_img.jpg';" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    {{!-- <div class="d-flex justify-content-end align-items-start" id="compare-div">
+                                        <div><i class="icon-share detail-like-icon"></i><i class="fa fa-heart-o detail-like-icon"></i>
+                                        </div>
+                                    </div> --}}
+                    <div class="d-flex flex-grow-1 justify-content-between" id="detail-price-div">
+                        <div class="d-flex flex-column justify-content-center" id="price-left-div" style="filter: grayscale(0%);">
+                            <h5 class="green-text">Property ID:{{ data.listing.prop_id }}</h5>
+                            <p class="detail-price-text"><strong>{{currencyFormatter data.listing.prop_price }}</strong></p>
+                        </div>
+                        <div class="justify-content-end" id="downpayment-div">
+                            <div class="d-flex justify-content-between" id="downpayment-grid"></div>
+                            <div class="d-flex justify-content-center align-items-center"></div>
+                            <div class="input-group">
+                            </div><a class="btn btn-primary btn-block margin-top-20" role="button" href="/afdcalculator">Calculate Mortgage & Apply</a>
+                            <div class="text-center margin-top-20"><a href="#">Buy Outright</a></div>
+                            
+                             </div>
+                    </div>
+                    <div class="mt-50">
+                        <h5>Description</h5>
+                        {{ data.listing.prop_desc }}
+                    </div>
+                </div>
+            </div>
+            <div id="minimal-tabs">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab"
+                            href="#tab-1">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" role="tab" data-toggle="tab"
+                            href="#tab-2">Financials</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" role="tab" data-toggle="tab"
+                            href="#tab-3">Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" role="tab" data-toggle="tab"
+                            href="#tab-3">Buy Process</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" role="tab" data-toggle="tab"
+                            href="#tab-3">Similar Listings</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
+                        <div class="row" id="property-description">
+                            <div
+                                class="col-lg-3 thick-top-border border-left-1 border-bottom-1 border-right-1 padding-top-20">
+                                <div class="table-responsive table-borderless">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>Area</p>
+                                                </td>
+                                                <td>
+                                                   <p>{{ data.listing.prop_area }}{{ data.listing.prop_areaunits }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Bedroom</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_beds }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Bathroom</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_baths }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Garage</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_garage }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pool</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_pool }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Kitchen</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_kitchen }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Amenities</p>
+                                                </td>
+                                                <td>
+                                                    <p>{{ data.listing.prop_amenities }}</p>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <ul></ul>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-5 d-flex flex-column thick-top-border border-bottom-1 border-right-1 padding-top-20">
+                                <div><iframe allowfullscreen="" frameborder="0"
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAmPcQsC2KzDI_b1h1IALMVYzIX1cxqX6Q&amp;q=10+PRINCE+ADELOWO+ADEDEJI+STREET%2C+LAGOS&amp;zoom=15"
+                                        width="100%" height="300"></iframe></div>
+                                                         </div>
+                            <div class="col-lg-4 border-right-1 border-bottom-1 thick-top-border padding-top-20">
+                                <h5 class="text-center grey-text">NEIGHBORHOOD INFORMATION</h5>
+                                <div class="table-responsive table-borderless">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Settings</td>
+                                                <td class="text-right">Estate</td>
+                                            </tr>
+                                            <tr>
+                                                <td>School</td>
+                                                <td class="text-right">Within</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Road</td>
+                                                <td class="text-right">Tarred</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flood</td>
+                                                <td class="text-right">No flood</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Police Station</td>
+                                                <td class="text-right">500m</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col d-sm-none">
+                                <h4 class="text-secondary buy-process">Buy Process</h4>
+                            </div>
+                        </div>
+                        {{!-- <div class="row" id="buy-process-row">
+                            <div class="col-lg-8 col-xl-8 text-secondary padding-top-20">
+                                <div class="row">
+                                    <div class=" col-md-3 col-sm-12">
+                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                            aria-orientation="vertical">
+                                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                                href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                                aria-selected="true">Open House</a>
+                                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                                href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                                aria-selected="false">HDL Exclusive</a>
+                                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                                href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                                aria-selected="true">HDL Guarantee</a>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-9 col-sm-12">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                aria-labelledby="v-pills-home-tab">
+                                                <p>Open House is a 48-hour period that allows you to make an offer and
+                                                    start negotiating early. This is a new or previously listed property
+                                                    on the marketplace that has been listed while the certification
+                                                    process is being completed. When you.</p>
+                                                <ul>
+                                                    </li>
+                                                    <li>Engage sooner with sellers: Get a leg up on the competition.
+                                                        Open House allows you submit your bid ahead.
+                                                    </li>
+                                                    <li>Tip - Make your bid more competitive: Submitting an offer above
+                                                        the suggested offer price can increase your chances of being
+                                                        accepted by the seller, especially if ther.
+                                            </div>
+                                            </li>
+                                            </ul>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab">
+                                                <p>Open House is a 48-hour period that allows you to make an offer and
+                                                    start negotiating early. This is a new or previously listed property
+                                                    on the marketplace that has been listed while the certification
+                                                    process is being completed. When you make an offer, the seller will
+                                                    respond within 24 hours of the Open House period ending.</p>
+                                                <ul>
+                                                    </li>
+                                                    <li>Engage sooner with sellers: Get a leg up on the competition.
+                                                        Open House allows you submit your bid ahead of other marketplace
+                                                        investors and quickly get a response.
+                                                    </li>
+                                                    <li>Tip - Make your bid more competitive: Submitting an offer above
+                                                        the suggested offer price can increase your chances of being
+                                                        accepted by the seller, especially if there are other investors
+                                                        interested in the property.
+                                            </div>
+                                            </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xl-4 padding-top-20" style="color: rgb(254,254,254);">
+                                <h5>Property Management<br></h5>
+                                <div class="custom-box">
+                                    <p>Why Us?</p>
+                                    <p>From repairs and maintenance to communicating with tenants, our preferred
+                                        property management teams protect your assets and keep things running
+                                        smoothly<br></p>
+                                </div>
+                                <div class="text-center margin-top-20"><a class="btn btn-outline-danger text-black-50"
+                                        role="button" style="background-color: rgba(255,255,255,0);">View Options</a>
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
+                    <div class="tab-pane fade" role="tabpanel" id="tab-2"></div>
+                    <div class="tab-pane fade" role="tabpanel" id="tab-3"></div>
+                </div>
+            </div>
+        </main>
+    </section>

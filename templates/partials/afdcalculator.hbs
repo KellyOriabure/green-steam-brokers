@@ -1,0 +1,109 @@
+<!-- White Form Section START -->
+<div class="section-block-grey">
+    <div class="container">
+        <div class=" center-holder mb-40">
+            <h5 class="medium">MORTGAGE REPAYMENT & AFFORDABILITY CALCULATOR</h5>
+        </div>
+        <!-- Form Start -->
+        <form class="white-form mt-60">
+            <div class="row">
+                <div class="col-md-8 offset-sm-2">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <select>
+                                <option value="" disabled selected hidden>Mortgage Type...</option>
+                                <option value="0">Fixed Rate Morgate</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <input type="text" name="annulincome" placeholder="Annual Income *">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <input type="text" name="borrowers" placeholder="Number of Borrowers">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <input type="text" name="est_prop_price"
+                                placeholder="Estimated Property Price (Numberic) *">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <select>
+                                <option value="" disabled selected hidden>Marital Status...</option>
+                                <option value="0">Married</option>
+                                <option value="1">Single</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <input type="text" name="loan_period" placeholder="Loan Period(Years)">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <input type="text" name="dependants" placeholder="Number of Dependants">
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <select>
+                                <option value="" disabled selected hidden>Rate (%)</option>
+                                <option value="0">Bank: First Trust FMB/Rate: 10.0</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <select>
+                                <option value="" disabled selected hidden>Employment Status</option>
+                                <option value="0">Employed</option>
+                                <option value="0">Self Employed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalLong">
+                                See How Much You Can Borrow
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Affordability Calculator</h5>
+                                            {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button> --}}
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>MAXIMUM LOAN AMOUNT</p>
+                                                <h6 class="green-text">₦10,320,000.00</h6>
+                                            <br />
+                                            <p>You Can Afford a Home of</p>
+                                               <h6 class="green-text"> ₦35,088,000.00</h6>
+                                                <br />
+                                            <p>Minimum Required Deposit Amount</p>
+                                                 <h6 class="green-text">₦7,017,600.00</h6>
+                                                <br />
+                                            <p>Estimated Monthly Instalment</p>
+                                            <h6 class="green-text">₦121,833.33</h6>
+                                                <br />
+                                            <p>Interest Rate</p>
+                                            <h6 class="green-text">0.1%</h6>
+                                                <br />
+                                            <p>Your Home Loan Amount</p>
+                                            <h6 class="green-text">₦10,320,000.00</h6>
+                                            <br />
+                                            <p>YOUR SALARY IS QUITE LOW TO BUY THIS PROPERTY. KINDLY TRY INCREASING YOUR DOWN PAYMENT ABOVE 20%</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Cancel Application</button>
+                                            <a href="/mortgage-application" class="btn btn-primary">Apply Online</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!-- White Form Section END -->

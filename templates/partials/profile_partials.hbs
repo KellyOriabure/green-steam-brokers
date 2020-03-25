@@ -1,0 +1,95 @@
+<section class="mt-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Welcome, {{ user.firstName }}</h5>
+                <img src="https://www.homesdirect.ng/{{ user.pic }}" alt="">
+                <div>
+                    <h5>{{ user.fullName }}</h5>
+                    <p>Unverified {{ user.userType }}</p>
+                    <p>{{ user.address }}</p>
+                    <p>{{ user.phone }}</p>
+                    <button class="btn btn-primary">Get Verified</button>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex">
+                    <a href="/"><img src="../img/icon-currentloans.png" width="80%" border="0"></a>
+                    <a href="/"><img src="../img/icon-messages.png" width="80%" border="0"></a>
+                    <a href="/"><img src="../img/icon-loans.png" width="80%" border="0"></a>
+                    <a href="/"><img src="../img/icon-docs.png" width="80%" border="0"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                <h5 class="text-uppercase">LOAN SUMMARY</h5>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td>Issuing Bank</td>
+                            <td>First Trust Mortgage</td>
+                        </tr>
+                        <tr>
+                            <td>Savings Balance</td>
+                            <td><span class="ct-price">₦{{ user.balance }}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Outstanding Loan Balance</td>
+                            <td><span class="ct-price" style="background:#e11e26">₦0.00</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary">Pay Now</button>
+                </div>
+
+                 <div>
+                <h5 class="text-uppercase mt-30">PAYMENTS & DUE DATE</h5>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td>Next Payment Due</td>
+                            <td>April 3rd, 2020</td>
+                        </tr>
+                        <tr>
+                            <td>Total Pending</td>
+                            <td><span class="ct-price">₦0.00</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Completed</td>
+                            <td><span class="ct-price" style="background:#e11e26">₦0.00</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+        <section class="" style="margin-top:40px">
+            <div class="container">
+                <labe>Recent Loan Repayment History</label>
+                <table class="table">
+                    <thead class="loan_header">
+                        <tr>
+                            <th>No.</th>
+                            <th>Date</th>
+                            <th>Loan Reference</th>
+                            <th>Amount</th>
+                            <th>Outstanding</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" align="center">No Records Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </section>
