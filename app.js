@@ -28,8 +28,6 @@ hbs.registerPartials(patialspath)
 
 app.get('', (req, res) => {
     res.render('index')
-    console.log(viewspath)
-
 })
 
 app.use('/', pagesRoutes)
