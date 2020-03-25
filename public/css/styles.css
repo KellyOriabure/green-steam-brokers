@@ -2342,7 +2342,7 @@ i) Forms
     border: none;
     outline: 0;
     background: #fff !important;
-    border: 1px solid #f4f4f4;
+    border: 1px solid #d1d0d0;
     background: transparent;
     font-size: 13px;
     font-weight: 600;
@@ -15294,8 +15294,17 @@ padding-right: 18px;
 	color: rgb(197, 197, 197);
   }
 
-  /*
-  ======================================
+ .calc_header{
+	padding: 12px;
+    background-color: black;
+    color: white;
+    text-align: center;
+	font-weight: 700;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+ }
 
-  ==================================
-  */
+ .affcalc{
+	background-color: white;
+    padding: 10px;
+ }

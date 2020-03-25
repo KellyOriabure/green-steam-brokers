@@ -1,9 +1,35 @@
 <div class="section-block-grey">
 	<div class="container">				
-	
-    <div class="row property">
+	<div class="row">
+        <div class="col-md-3">
+            <div class="affcalc">
+                <form class="white-form">
+                    <div class="calc_header">Affordability Calculator</div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" name="property_price" placeholder="Property Price *">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="down_payment" placeholder="Down Payment *">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="term" placeholder="Term(years) *">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="int_rate" placeholder="Interest Rate(%) *">
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="button-sm primary-button semi-rounded full-width">Calculate
+                                Payment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-9">
+                <div class="row property">
         {{#each data }}
-    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 property-card">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 property-card">
       
         <div class="card">
             <div class="thumb-image">
@@ -52,6 +78,9 @@
     </div>
     {{/each }}
 </div>
+        </div>
+    </div>
+
 		<div class="mt-30 center-holder">
 			<a href="#" class="grey-button button-pagination semi-rounded">1</a>
 			<a href="#" class="grey-button-bordered button-pagination semi-rounded">2</a>
